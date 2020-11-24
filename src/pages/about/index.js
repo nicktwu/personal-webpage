@@ -21,7 +21,7 @@ const useStyle = makeStyles((theme) => ({
         backgroundColor: alternateBackgroundColor[50]
     },
     aboutCard: {
-        padding: theme.spacing(2)
+        padding: theme.spacing(4)
     },
     aboutCardHolder: {
         [theme.breakpoints.down("md")] : {
@@ -36,13 +36,14 @@ const useStyle = makeStyles((theme) => ({
     },
     content: {
         padding: theme.spacing(2),
-        overflowX: "scroll",
+        overflowY: "scroll",
         [theme.breakpoints.down("md")]: {
             height: "60vh"
         },
         [theme.breakpoints.up("md")]: {
             height: "50vh"
-        }
+        },
+
     }
 }))
 
@@ -60,7 +61,7 @@ function AboutPage() {
     const [showing, setVisibility] = useState(false)
     return (
         <Frame>
-            <Grid className={classes.frame} container direction={"column"} justify={"center"} spacing={1}>
+            <Grid className={classes.frame} container direction={"column"} justify={"center"} spacing={0}>
                 <Grid item container justify={"center"} >
                     <Grid item xs={11} className={classes.aboutCardHolder}>
                         <Grow in={showing} timeout={1000}>

@@ -29,16 +29,19 @@ function ContactPage() {
     return (
         <Frame>
             <Grid item container className={classes.basePadding}
-                  direction={"column"} justify={"center"} alignItems={"stretch"}>
+                  direction={"column"} justify={"center"} alignItems={"center"}>
+                <Grid item xs={10} container direction={"row"} justify={"center"} alignItems={"center"}>
                 <Fade in={showing} timeout={1000}>
-                    <Paper elevation={1} className={classes.basePaper}>
-                        <Typography gutterBottom variant={"h5"}>Contact</Typography>
-                        <Divider className={classes.divider} />
-                        <Waypoint onEnter={() => setVisibility(true)} onLeave={()=>setVisibility(false)} />
-                        <Typography gutterBottom variant={"body2"}>For professional connections and recruiting purposes, I can be reached via my <Link href={"https://www.linkedin.com/in/nicholas-wu-748a86180/"}>LinkedIn</Link>.</Typography>
-                        <Typography gutterBottom variant={"body2"}>If you are interested in tutoring or need help with course material, you may contact me via <Link href={"mailto:nwu@alum.mit.edu"}>email</Link>. </Typography>
-                    </Paper>
+                        <Paper elevation={1} className={classes.basePaper}>
+                            <Typography gutterBottom variant={"h5"}>Contact</Typography>
+                            <Divider className={classes.divider} />
+                            <Waypoint onEnter={() => setVisibility(true)} onLeave={()=>setVisibility(false)} />
+                            <Typography gutterBottom variant={"body2"}>For professional connections and recruiting purposes, I can be reached via my <Link href={"https://www.linkedin.com/in/nicholas-wu-748a86180/"}>LinkedIn</Link>.</Typography>
+                            <Typography gutterBottom variant={"body2"}>If you are interested in tutoring or need help with course material, you may contact me via <Link href={"mailto:nwu@alum.mit.edu"}>email</Link>. </Typography>
+                        </Paper>
+
                 </Fade>
+            </Grid>
 
             </Grid>
         </Frame>
