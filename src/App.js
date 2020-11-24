@@ -7,6 +7,7 @@ import {MuiThemeProvider} from '@material-ui/core/styles';
 import { theme } from './theme';
 import { Element } from 'react-scroll';
 import {Toolbar} from "@material-ui/core";
+import "./App.css";
 
 
 const pages = [
@@ -25,11 +26,9 @@ function App() {
             <Toolbar/>
             <Grid container spacing={0} direction={"column"} alignItems={"stretch"}>
                 { pages.map((page) => (
-                    <React.Fragment>
-                        <Element key={page.name} name={page.id}>
-                            {page.component}
-                        </Element>
-                    </React.Fragment>
+                    <Element key={page.name} name={page.id}>
+                        {page.component}
+                    </Element>
                 ))}
             </Grid>
         </MuiThemeProvider>

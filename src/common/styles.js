@@ -11,7 +11,9 @@ const style = (theme) => ({
         },
         [theme.breakpoints.up("sm")] : {
             height: "calc(100vh - 64px)"
-        }
+        },
+        position: "relative",
+        top: 0
     },
     appBar: {
         textAlign: "right"
