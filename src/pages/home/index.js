@@ -27,8 +27,14 @@ const useStyle = makeStyles((theme) => ({
         opacity: "70%"
     },
     personalImage: {
-        height: 320,
-        width:270,
+        [theme.breakpoints.down("sm")] : {
+            height: 270,
+            width: 200
+        },
+        [theme.breakpoints.up("sm")]: {
+            height: 320,
+            width: 270
+        },
         objectFit: "cover",
     },
     homeContent: {

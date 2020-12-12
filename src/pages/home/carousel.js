@@ -84,7 +84,7 @@ export default function Carousel() {
     return (
         <div className={classes.carouselFilter}>
             <Grid container direction={"column"} className={classes.carouselContainer}
-                  style={{marginLeft: "-" + (slide*100).toString() + "vw"}}>
+                  style={{marginLeft: "-" + (slide*100).toString() + "%"}}>
                 { carouselSrcs.map((url, idx) => (
                     <Grid item className={classes.carouselItem} key={idx}>
                         <img className={classes.carouselImage} src={url}/>

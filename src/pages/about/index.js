@@ -63,7 +63,7 @@ function AboutPage() {
         <Frame>
             <Grid className={classes.frame} container direction={"column"} justify={"center"} spacing={0}>
                 <Grid item container justify={"center"} >
-                    <Grid item xs={11} className={classes.aboutCardHolder}>
+                    <Grid item xs={12} sm={11} className={classes.aboutCardHolder}>
                         <Grow in={showing} timeout={1000}>
                             <Paper elevation={2} className={classes.aboutCard}>
                                 <Grid container direction={"column"}>
